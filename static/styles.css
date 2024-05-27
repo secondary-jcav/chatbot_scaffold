@@ -16,12 +16,12 @@ html {
 }
 form {
   margin-top: auto;
-  padding: 20px; /* Increased padding */
-  background-color: #e2e8f0; /* A different color for the input bar */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  padding: 20px;
+  background-color: #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .query {
   text-align: right;
   color: #333;
-  margin-right: 20px; /* Ensures alignment on the right */
+  margin-right: 20px;
 }
