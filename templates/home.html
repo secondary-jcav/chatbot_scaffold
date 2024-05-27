@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Interface</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://unpkg.com/htmx.org"></script>
+  </head>
+  <body>
+    <div id="chat-container" class="flex flex-col h-full">
+      <div id="chat-output" class="flex-1 overflow-y-auto">
+        <!-- Responses and Queries will appear here -->
+      </div>
+      <form
+        hx-post="/submit"
+        hx-target="#chat-output"
+        hx-trigger="submit"
+        hx-swap="beforeend"
+        class="p-4 bg-blue-200"
+      >
+        <input
+          type="text"
+          name="userInput"
+          placeholder="Type here..."
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button type="submit" class="btn btn-primary px-6 py-3">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
