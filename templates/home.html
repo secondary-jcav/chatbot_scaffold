@@ -13,11 +13,20 @@
   </head>
   <body>
     <div id="chat-container" class="flex flex-col h-full">
+      <div
+        id="loading"
+        class="htmx-indicator inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center"
+      >
+        <div class="bg-white p-4 rounded flex items-center">
+          <span class="ml-3 text-sm font-medium">Loading...</span>
+        </div>
+      </div>
       <div id="chat-output" class="flex-1 overflow-y-auto">
         <!-- Responses and Queries will appear here -->
       </div>
       <form
         hx-post="/submit"
+        hx-indicator="#loading"
         hx-target="#chat-output"
         hx-trigger="submit"
         hx-swap="beforeend"
