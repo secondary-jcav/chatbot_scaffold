@@ -14,12 +14,15 @@ Install requirements
 
 `pip install -r requirements.txt`
 
-In root, add .env file with your api key
-`API_KEY=key_goes_here`
+Add an environment variable for openaikey
+
+```
+export openaikey = your_api_key_here
+```
 
 Run app with
 
-`uvicorn main:app --reload`
+`sh start.sh dev`
 
 ## License
 
